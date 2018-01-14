@@ -1,0 +1,47 @@
+.form-group
+  margin-bottom: $space-st
+
+.form-group__input
+  background: $primary-light
+  border: 0
+  border-bottom: 2px solid transparent
+  height: 36px
+  font-size: rem(16)
+  padding-left: $space-s
+  padding-right: $space-s
+  transition: .3s border-bottom-color
+  width: 100%
+
+  &:active,
+  &:focus
+    border-bottom-color: $secondary-color
+
+.form-group__input--invalid
+  border-bottom-color: $error-color
+
+  &:active,
+  &:focus
+    border-color: $error-color
+
+.form-group__input--margin
+  margin-bottom: $space-m
+
+.form-group__label
+  display: flex
+  margin-bottom: $space-s
+
+.form-group__required,
+.form-group__hint,
+.form-group__error
+  display: block
+  font-size: rem(12)
+
+.form-group__required
+  margin-left: $space-xs
+
+.form-group__hint,
+.form-group__error
+  margin-top: $space-xs
+
+.form-group__error
+  color: $error-color
