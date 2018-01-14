@@ -12,7 +12,7 @@ import SignUp from './components/signup';
 import Home from './components/home';
 
 // Style
-import './index.css';
+import './index.sass';
 
 ReactDOM.render(
   <Router>
@@ -23,5 +23,5 @@ ReactDOM.render(
       </Switch>
     </div>
   </Router>,
-  document.getElementById('root')
+  document.querySelector('.js-root')
 );
