@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/index.sass",
-    "watch-css": "npm run build-css && node-sass-chokidar --watch=sass --output-style=compressed --source-map=index.css.map --recursive src/index.sass -o src",
+    "watch-css": "npm run build-css && node-sass-chokidar --watch=sass --output-style=compressed --recursive src/index.sass -o src",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
