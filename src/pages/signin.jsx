@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Routes from './../utils/routes';
 
 class SignIn extends Component {
   render() {
@@ -29,7 +30,7 @@ class SignIn extends Component {
           <button type="submit" className="btn btn--outline btn--block">Sign in</button>
         </form>
 
-        <p className="user-flow__link">Don't have an account? <Link to="/signup">Sign up</Link></p>
+        <p className="user-flow__link">Don't have an account? <Link to={Routes.signup}>Sign up</Link></p>
       </div>
     )
   }
