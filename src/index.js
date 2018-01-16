@@ -6,9 +6,9 @@ import {
   Switch
 } from 'react-router-dom';
 
-// Main components
-import SignIn from './components/signin';
-import SignUp from './components/signup';
+// Pages
+import SignIn from './pages/signin';
+import SignUp from './pages/signup';
 
 import './index.css';
 
