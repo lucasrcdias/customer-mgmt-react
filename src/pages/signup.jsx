@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Routes from './../utils/routes';
 
+import { Hint, Label, Validation, Input } from './../components/presentationals/forms';
+
 class SignUp extends Component {
   render() {
     return (
@@ -10,32 +12,21 @@ class SignUp extends Component {
 
         <form className="box user-flow__box">
           <div className="form-group">
-            <label>
-              <span className="form-group__label">
-                Name <abbr className="form-group__required">*</abbr>
-              </span>
-              <input type="text" name="name" className="form-group__input" placeholder="Your name" />
-            </label>
+            <Label text="Name" required="true">
+              <Input type="text" placeholder="Your name"/>
+            </Label>
           </div>
 
           <div className="form-group">
-            <label>
-              <span className="form-group__label">
-                E-mail <abbr className="form-group__required">*</abbr>
-              </span>
-              <input type="email" name="email" className="form-group__input" placeholder="Your e-mail"/>
-            </label>
+            <Label text="E-mail" required="true">
+              <Input type="email" placeholder="Your email"/>
+            </Label>
           </div>
 
           <div className="form-group">
-            <label>
-              <span className="form-group__label">
-                Password <abbr className="form-group__required">*</abbr>
-              </span>
-              <input type="password" name="password" className="form-group__input form-group__input--invalid" placeholder="Your password"/>
-              <strong className="form-group__error">Can't be blank</strong>
-              <small className="form-group__hint">Must have between 6 and 18 characters</small>
-            </label>
+            <Label text="Password" required="true">
+              <Input type="password" placeholder="Your password" invalid="true"/>
+            </Label>
           </div>
 
           <button type="submit" className="btn btn--outline btn--block">Sign up</button>
