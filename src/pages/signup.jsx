@@ -25,7 +25,7 @@ class SignUp extends Component {
 
           <div className="form-group">
             <Label text="Password" required="true">
-              <Input type="password" placeholder="Your password" invalid="true"/>
+              <Input type="password" placeholder="Your password"/>
             </Label>
           </div>
 

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Routes from './../utils/routes';
 
+import { Hint, Label, Validation, Input } from './../components/presentationals/forms';
+
 class SignIn extends Component {
   render() {
     return (
@@ -10,21 +12,15 @@ class SignIn extends Component {
 
         <form className="box user-flow__box">
           <div className="form-group">
-            <label>
-              <span className="form-group__label">
-                E-mail <abbr className="form-group__required">*</abbr>
-              </span>
-              <input type="email" name="email" className="form-group__input" placeholder="Your e-mail"/>
-            </label>
+            <Label text="E-mail">
+              <Input type="email" placeholder="Your email"/>
+            </Label>
           </div>
 
           <div className="form-group">
-            <label>
-              <span className="form-group__label">
-                Password <abbr className="form-group__required">*</abbr>
-              </span>
-              <input type="password" name="password" className="form-group__input" placeholder="Your password"/>
-            </label>
+            <Label text="Password">
+              <Input type="password" placeholder="Your password"/>
+            </Label>
           </div>
 
           <button type="submit" className="btn btn--outline btn--block">Sign in</button>
