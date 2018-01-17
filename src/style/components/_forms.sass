@@ -3,22 +3,27 @@
 
 .form-group__input
   background: $primary-light
-  border: 0
-  border-bottom: 2px solid transparent
+  border: 1px solid $secondary-gray
+  border-radius: $border-radius
   height: 36px
-  font-size: rem(16)
+  font-size: rem(14)
   padding-left: $space-s
   padding-right: $space-s
-  transition: .3s border-bottom-color
+  transition: .3s border-color
   width: 100%
 
+  &:hover,
   &:active,
   &:focus
-    border-bottom-color: $secondary-color
+    border-color: $primary-gray
+
+  &:invalid
+    box-shadow: none
 
 .form-group__input--invalid
-  border-bottom-color: $error-color
+  border-color: $error-color
 
+  &:hover,
   &:active,
   &:focus
     border-color: $error-color
@@ -28,11 +33,13 @@
 
 .form-group__label
   display: flex
-  margin-bottom: $space-s
+  flex-wrap: wrap
+  font-size: rem(14)
+  line-height: rem(24)
 
 .form-group__required,
 .form-group__hint,
-.form-group__error
+.form-group__validation
   display: block
   font-size: rem(12)
 
@@ -40,8 +47,8 @@
   margin-left: $space-xs
 
 .form-group__hint,
-.form-group__error
+.form-group__validation
   margin-top: $space-xs
 
-.form-group__error
+.form-group__validation
   color: $error-color
