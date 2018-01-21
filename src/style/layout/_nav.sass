@@ -1,0 +1,56 @@
+.nav
+  background: $primary-light
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .5)
+
+.nav__menu,
+.nav__submenu
+  list-style: none
+
+.nav__menu,
+.nav__menu__item
+  align-items: center
+  display: flex
+
+.nav__menu
+  flex-wrap: wrap
+  height: 50px
+  justify-content: flex-end
+
+.nav__menu__item
+  height: 100%
+  padding-left: $space-m
+  padding-right: $space-m
+  position: relative
+  transition: .2s background
+
+  &:hover
+    background: $secondary-light
+
+    .nav__submenu
+      opacity: 1
+      pointer-events: all
+
+.nav__submenu
+  background: $primary-light
+  opacity: 0
+  pointer-events: none
+  position: absolute
+  right: 0
+  top: 100%
+  transition: .2s opacity
+  width: 100%
+
+.nav__submenu__item
+  background: none
+  border: 0
+  color: $primary-dark
+  display: block
+  font-size: 1rem
+  font-weight: $fw-regular
+  padding: $space-m
+  text-decoration: none
+
+  &:hover
+    color: $secondary-dark
+    font-weight: $fw-bold
+    text-decoration: underline
