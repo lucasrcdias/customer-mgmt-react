@@ -1,5 +1,6 @@
-import { SignUp } from './user-actions';
+import { signUp, signIn } from './user-actions';
 
 export default {
-  SignUp
+  signUp,
+  signIn
 }

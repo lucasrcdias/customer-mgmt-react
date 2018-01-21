@@ -1,12 +1,18 @@
-import { SIGNED_UP } from 
+import { SIGN_UP, SIGN_IN } from './../constants';
 
 function SignUp (user) {
   return {
-    type: SIGNED_UP,
-    user
+    type: SIGN_UP,
+    payload: user
   }
 }
 
-export default {
-  SignUp
+function SignIn (user) {
+  return {
+    type: SIGN_IN,
+    payload: user
+  }
 }
+
+export const signUp = SignUp;
+export const signIn = SignIn;
