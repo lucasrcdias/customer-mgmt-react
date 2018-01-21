@@ -84,7 +84,7 @@ class SignUp extends Component {
 
           <button type="submit" className="btn btn--outline btn--block">Sign up</button>
         </form>
-        <p className="user-flow__link">Already have an account? <Link to={Routes.signin}>Sign in</Link></p>
+        <p className="user-flow__link">Already have an account? <Link className="link" to={Routes.signin}>Sign in</Link></p>
       </div>
     )
   }
