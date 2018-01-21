@@ -1,5 +1,6 @@
 export default {
-  "index": "/whatever",
+  "dashboard": "/dashboard",
   "signin": "/",
-  "signup": "/signup"
+  "signup": "/signup",
+  "edit": "/edit"
 }

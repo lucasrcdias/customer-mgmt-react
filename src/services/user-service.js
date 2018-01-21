@@ -12,7 +12,7 @@ class UserService {
         .then((response) => {
           store.dispatch(actions.signUp(response.data));
           localStorage.setItem('token', response.data.token);
-          history.push(Routes.index);
+          history.push(Routes.dashboard);
         })
         .catch((errors) => {
           reject(errors.response.data.errors);
@@ -26,7 +26,7 @@ class UserService {
         .then((response) => {
           store.dispatch(actions.signIn(response.data));
           localStorage.setItem('token', response.data.token);
-          history.push(Routes.index);
+          history.push(Routes.dashboard);
         })
         .catch((errors) => {
           reject(errors.response.data.errors);
