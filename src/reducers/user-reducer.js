@@ -1,23 +1,11 @@
-import { SIGNED_UP } from './../constants';
+import { SIGN_UP, SIGN_IN } from './../constants';
 
-let user = {
-  email: null,
-  password: null,
-  name: null
-}
-
-export default (state = user, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
-    case SIGNED_UP:
-      const { email, password, name } = action;
-      
-      user = {
-        email,
-        password,
-        name
-      }
-
-      return user;
+    case SIGN_UP:
+    case SIGN_IN:
+      const user = action.payload;
+      return Object.assign({}, state, { user });
     default:
       return state;
   }
