@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import {
   Router,
@@ -18,6 +18,7 @@ import Routes from './utils/routes';
 // Pages
 import signIn from './components/signin';
 import signUp from './components/signup';
+import dashboard from './components/dashboard';
 
 import './index.css';
 
@@ -26,12 +27,13 @@ export const store = createStore(reducers);
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <div>
+      <Fragment>
         <Switch>
           <Route exact path={Routes.signin} component={signIn} />
           <Route exact path={Routes.signup} component={signUp} />
+          <Route exact path={Routes.dashboard} component={dashboard} />
         </Switch>
-      </div>
+      </Fragment>
     </Router>
   </Provider>,
   document.querySelector('.js-root')
