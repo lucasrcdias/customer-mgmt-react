@@ -33,6 +33,12 @@ class UserService {
         })
     });
   }
+
+  signout = () => {
+    store.dispatch(actions.signOut({}));
+    localStorage.removeItem('token');
+    history.push(Routes.signin);
+  }
 }
 
 export default new UserService();
