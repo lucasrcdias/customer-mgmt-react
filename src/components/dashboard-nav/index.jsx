@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Routes from './../../utils/routes';
+import userService from './../../services/user-service';
 
 class DashboardNav extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user: {
-        name: 'Lucas'
-      }
+      user: props.user
     }
   }
 
   signout = () => {
-    console.log('Clicked signout');
+    userService.signout();
   }
 
   render() {
@@ -37,4 +37,10 @@ class DashboardNav extends Component {
   }
 }
 
-export default DashboardNav;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(DashboardNav);
