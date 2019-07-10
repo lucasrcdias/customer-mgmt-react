@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Routes from './../../utils/routes';
-import userService from './../../services/user-service';
+import SignoutLink from './../signout-link';
 
 class DashboardNav extends Component {
   constructor(props) {
@@ -11,10 +11,6 @@ class DashboardNav extends Component {
     this.state = {
       user: props.user
     }
-  }
-
-  signout = () => {
-    userService.signout();
   }
 
   render() {
@@ -27,7 +23,7 @@ class DashboardNav extends Component {
 
               <div className="nav__submenu">
                 <Link className="nav__submenu__item" to={Routes.edit}>Edit</Link>
-                <button type="button" className="nav__submenu__item" onClick={this.signout}>Sign out</button>
+                <SignoutLink />
               </div>
             </li>
           </ul>
